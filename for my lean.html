@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Monthsary, My Lean!</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #444;
+      text-align: center;
+      padding: 30px;
+    }
+    .question {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .choice-btn {
+      margin: 10px;
+      border: none;
+      border-radius: 15px;
+      padding: 12px 18px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ff85a2;
+      color: white;
+      transition: 0.3s;
+    }
+    .choice-btn:hover {
+      background-color: #ff4e78;
+    }
+    img.gif {
+      width: 250px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+    .love-message {
+      font-size: 2em;
+      color: #e91e63;
+      animation: bounce 1s infinite alternate;
+      margin-top: 30px;
+    }
+    @keyframes bounce {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://audio.jukehost.co.uk/ZXL1AXOyaNGWl78KqOHzR4cLHa3SxZFc" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Cute Opening -->
+  <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" class="gif" alt="Cute animals cuddling">
+  <h1>💗 Happy Monthsary, my Lean! 💗</h1>
+
+  <div class="question active" id="q1">
+    <p>As we are currently 175 kilometers away, I would like to ask you something...</p>
+    <button class="choice-btn" onclick="nextQuestion(2)">Okay 💌</button>
+  </div>
+
+  <div class="question" id="q2">
+    <img src="https://media.giphy.com/media/13VTdj5vDqFxEA/giphy.gif" class="gif" alt="Asking you out">
+    <p>Can I ask you out? 🥹</p>
+    <button class="choice-btn" onclick="nextQuestion(3)">Yes 💖</button>
+    <button class="choice-btn" onclick="alert('😭 cries in 175 kilometers 😭')">No 😭</button>
+  </div>
+
+  <div class="question" id="q3">
+    <img src="https://media.giphy.com/media/3oEjHI8zP4uV9xF2k0/giphy.gif" class="gif" alt="Excited">
+    <p>I knew it!!! So let's go! 🥰✨</p>
+    <button class="choice-btn" onclick="nextQuestion(4)">Yay! 🎉</button>
+  </div>
+
+  <div class="question" id="q4">
+    <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" class="gif" alt="Video or call">
+    <p>What do you want? 📱</p>
+    <button class="choice-btn" onclick="nextQuestion(5)">Video Call 📹</button>
+    <button class="choice-btn" onclick="nextQuestion(5)">Call 📞</button>
+  </div>
+
+  <div class="question" id="q5">
+    <img src="https://media.giphy.com/media/xUA7b9dG8bV2Lx2wU4/giphy.gif" class="gif" alt="Fun choices">
+    <p>What do u wanna do? 🧸</p>
+    <button class="choice-btn" onclick="showSubQuestion('play')">🎮 Play</button>
+    <button class="choice-btn" onclick="showSubQuestion('movie')">🎬 Movie Night</button>
+    <button class="choice-btn" onclick="nextQuestion(6)">🗣️ Chikahan</button>
+  </div>
+
+  <div class="question" id="q5-play">
+    <img src="https://media.giphy.com/media/f9hnhCPc2f461/giphy.gif" class="gif" alt="Gaming">
+    <p>Choose a game 🎮:</p>
+    <button class="choice-btn" onclick="nextQuestion(6)">Mobile Legends 🛡️</button>
+    <button class="choice-btn" onclick="nextQuestion(6)">Roblox 🧱</button>
+  </div>
+
+  <div class="question" id="q5-movie">
+    <img src="https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif" class="gif" alt="Movie watching">
+    <p>Pick a movie 🍿:</p>
+    <button class="choice-btn" onclick="nextQuestion(6)">Zzzzz 😴</button>
+    <button class="choice-btn" onclick="nextQuestion(6)">Zzzz 😌</button>
+  </div>
+
+  <div class="question" id="q6">
+    <img src="https://media.giphy.com/media/ToMjGppLes0ENI5osCc/giphy.gif" class="gif" alt="Yummy food">
+    <p>What do you want to eat? 🍽️</p>
+    <button class="choice-btn" onclick="nextQuestion(7)">🍕 Angel's Pizza</button>
+    <button class="choice-btn" onclick="nextQuestion(7)">🍗 Chicken Pastil</button>
+    <button class="choice-btn" onclick="nextQuestion(7)">🍖 SNR</button>
+    <button class="choice-btn" onclick="nextQuestion(7)">🍗 Chicken</button>
+    <button class="choice-btn" onclick="nextQuestion(7)">🍝 Pasta</button>
+    <button class="choice-btn" onclick="nextQuestion(7)">🍚 Rice Meal</button>
+  </div>
+
+  <div class="question" id="q7">
+    <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif" class="gif" alt="Desserts">
+    <p>What dessert do you want? 🍨</p>
+    <button class="choice-btn" onclick="nextQuestion(8)">🍦 Ice Cream</button>
+    <button class="choice-btn" onclick="nextQuestion(8)">🍰 Cake</button>
+    <button class="choice-btn" onclick="nextQuestion(8)">🍩 Others</button>
+    <button class="choice-btn" onclick="showMe()">😳 Me</button>
+  </div>
+
+  <div class="question" id="q7-me">
+    <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" class="gif" alt="Me blush">
+    <p>Uhmm... sa July! 🥹💖</p>
+    <button class="choice-btn" onclick="nextQuestion(8)">Okayyy 😳</button>
+  </div>
+
+  <div class="question" id="q8">
+    <img src="https://media.giphy.com/media/3ohhwgAoxqU7c4i8Ba/giphy.gif" class="gif" alt="Clock ticking">
+    <p>What time do you want us to have a date? 🕒</p>
+    <button class="choice-btn" onclick="nextQuestion(9)">7 PM</button>
+    <button class="choice-btn" onclick="nextQuestion(9)">8 PM</button>
+    <button class="choice-btn" onclick="nextQuestion(9)">9 PM</button>
+    <button class="choice-btn" onclick="nextQuestion(9)">10 PM</button>
+  </div>
+
+  <div class="question" id="q9">
+    <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" class="gif" alt="Love heart">
+    <h2 class="love-message">I love you, my Lean 💖</h2>
+    <p>See you, my love! 💌</p>
+  </div>
+
+  <script>
+    function nextQuestion(nextId) {
+      const current = document.querySelector('.question.active');
+      if (current) current.classList.remove('active');
+      document.getElementById('q' + nextId).classList.add('active');
+    }
+    function showSubQuestion(type) {
+      document.querySelector('.question.active').classList.remove('active');
+      document.getElementById('q5-' + type).classList.add('active');
+    }
+    function showMe() {
+      document.querySelector('.question.active').classList.remove('active');
+      document.getElementById('q7-me').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
